@@ -92,15 +92,14 @@ const UploadImage = () => {
       <button onClick={handleUpload}>Upload Image</button>
       {imageUrl && (
         <div>
-          <img src={imageUrl} alt="Uploaded" style={{ width: '100px' }} />
+          <img src={imageUrl} alt="Uploaded" />
           <p>{name}</p>
         </div>
       )}
-      <div>
-        <h2>Uploaded Images</h2>
+      <div className="uploaded-images">
         {images.map((img) => (
           <div key={img.id}>
-            <img src={img.imageUrl} alt={img.name} style={{ width: '100px' }} />
+            <img src={img.imageUrl} alt={img.name} />
             <p>{img.name}</p>
             <button onClick={() => handleDelete(img.id, img.imageUrl)}>Delete</button>
           </div>

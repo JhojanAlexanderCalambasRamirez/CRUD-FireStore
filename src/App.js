@@ -4,6 +4,7 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import Login from './components/Login';
 import Create from './components/Create';
 import UploadImage from './components/UploadImage';
+import './App.css';
 
 function App() {
   const [user, setUser] = useState(null);
